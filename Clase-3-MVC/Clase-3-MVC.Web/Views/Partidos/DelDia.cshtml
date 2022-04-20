@@ -1,0 +1,12 @@
+﻿@model List<PartidoViewModel>
+    
+@{
+    ViewData["Title"] = "DelDia";
+}
+
+<h1>DelDia</h1>
+@foreach (PartidoViewModel partido in @Model)
+{
+    <p>@partido.Fecha en @partido.Lugar</p>
+}
+

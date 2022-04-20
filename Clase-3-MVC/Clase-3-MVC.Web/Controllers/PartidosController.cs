@@ -88,5 +88,16 @@ namespace Clase_3_MVC.Web.Controllers
             PartidoViewModel partido = _partidos.Find(o => o.Id == id);
             return View(partido);
         }
+
+        // GET: PartidosController/EliminarConfirmacion/5
+        [Route("partidos/deldia/{dia}/{mes}/{anio}")]
+        public ActionResult DelDia(int dia, int mes, int anio)
+        {
+            DateTime FechaBuscada = new DateTime(anio, mes, dia);
+
+            List<PartidoViewModel> partidoEncontrados = _partidos.FindAll(o => o.Fecha.Date == FechaBuscada.Date);
+
+            return View(partidoEncontrados);
+        }
     }
 }
