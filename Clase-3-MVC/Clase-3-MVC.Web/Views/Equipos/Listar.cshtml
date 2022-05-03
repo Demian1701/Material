@@ -1,0 +1,14 @@
+﻿@using Clase_3_MVC.Entidades
+
+
+@model List<Equipo>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h1>Equipos</h1>
+@foreach (Equipo equipo in @Model)
+{   
+    <p>@equipo.Nombre</p>
+}
+

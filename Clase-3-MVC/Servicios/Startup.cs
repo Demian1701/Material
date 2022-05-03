@@ -8,10 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Clase_3_MVC.Servicios;
-using Clase_3_MVC.Servicios.Implementaciones;
 
-namespace Clase_3_MVC.Web
+namespace Servicios
 {
     public class Startup
     {
@@ -26,7 +24,6 @@ namespace Clase_3_MVC.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.Add(new ServiceDescriptor(typeof(Servicios.IEquipoService), new EquipoService()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
