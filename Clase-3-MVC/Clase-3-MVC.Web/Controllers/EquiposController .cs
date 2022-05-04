@@ -5,19 +5,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Clase_3_MVC.Entidades;
+using Clase_3_MVC.Servicios;
 using Clase_3_MVC.Servicios.Implementaciones;
+
 
 namespace Clase_3_MVC.Web.Controllers
 {
     public class EquiposController : Controller
     {
         
-        public EquiposController(EquipoService equipoService)
+        public EquiposController(IEquipoService equipoService)
         {
             _equipoService = equipoService;
         }
 
-        EquipoService _equipoService;
+        IEquipoService _equipoService;
         
         private static List<Equipo> _equipos = new List<Equipo>()
         {
